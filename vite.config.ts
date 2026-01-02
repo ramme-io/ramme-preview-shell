@@ -7,9 +7,6 @@ export default defineConfig({
   resolve: {
     alias: {
       '@': path.resolve(__dirname, './src'),
-      
-      // ✅ FIX: Go up 2 levels to find the sibling 'ramme-ui' folder
-      '@ramme-io/ui': path.resolve(__dirname, '../../ramme-ui/src'),
     },
   },
   // ✅ CRITICAL: Allow Vite to serve files outside the current project folder
