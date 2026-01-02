@@ -24,7 +24,6 @@ const ProtectedRoute: React.FC = () => {
   const { user, isLoading } = useAuth();
 
   if (isLoading) {
-    // You can replace this with a proper loading spinner component
     return (
       <div className="flex h-screen w-full items-center justify-center">
         <Icon name="loader-circle" className="animate-spin h-12 w-12 text-primary" />
@@ -32,10 +31,12 @@ const ProtectedRoute: React.FC = () => {
     );
   }
 
-  if (!user) {
-    return <Navigate to="/login" replace />;
-  }
+  // 🔴 DELETE or COMMENT OUT these lines:
+  // if (!user) {
+  //   return <Navigate to="/login" replace />;
+  // }
 
+  // 🟢 The gate is now open:
   return <Outlet />;
 };
 
